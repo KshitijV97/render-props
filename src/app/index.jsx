@@ -7,10 +7,9 @@ import Filter from './filter';
 
 export default function App() {
 	function filterScreencasts(query, screencasts) {
-		return (
-			screencasts
-				.filter((screencast) => screencast.title.toLowerCase())
-				.indexOf(query.toLowerCase()) > -1
+		return screencasts.filter(
+			(screencast) =>
+				screencast.title.toLowerCase().indexOf(query.toLowerCase()) > -1
 		);
 	}
 
